@@ -22,7 +22,7 @@ spec:
         app: service-devops
     spec:
       containers:
-      - image: denidevsoa/simple-devops:latest
+      - image: denisdevsoa/simple-devops:latest
         name: service-devops
         ports:
         - containerPort: 8080
