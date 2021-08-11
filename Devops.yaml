@@ -15,10 +15,11 @@ spec:
         app: service-devops
     spec:
       containers:
-      - name: service-devops
-        image: denidevsoa/simple-devops:latest
+      - image: denidevsoa/simple-devops:latest
+        name: service-devops
         ports:
         - containerPort: 8080
+	  name: http
 ---
 kind: Service
 apiVersion: v1
@@ -29,6 +30,6 @@ spec:
   selector:
     app: service-devops
   ports:
-  - protocol: TCP
-    port: 80
-    targetPort: 8080
+    - protocol: TCP
+      port: 80
+      targetPort: 8080
