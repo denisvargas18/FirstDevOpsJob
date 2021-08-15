@@ -13,7 +13,7 @@ branches:
     #- uat
     #- feature
 before_script:
-  - chmod -R a+x devops/scripts
+  - chmod -R a+x devops
 script:
   - ./devops/scripts/compile.sh
   - ./devops/scripts/test.sh
