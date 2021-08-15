@@ -1,0 +1,26 @@
+language: java
+jdk:
+ - openjdk11
+#mono: none
+sudo: required
+dist: xenial # distribution linux ubuntu
+branches:
+  only:
+    - master
+    #- develop
+    #except:
+    #- uat
+    #- feature
+before_script:
+  - chmod -R a+x devops/scripts
+script:
+  - ./devops/scripts/compile.sh
+  - ./devops/scripts/test.sh
+  - ./devops/scripts/report.sh
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
+  - ./devops/scripts/build.sh
+notifications:
+  email:
+    on_success: always
+    on_failure: always
