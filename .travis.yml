@@ -13,9 +13,9 @@ branches:
     #- uat
     #- feature
 #before_script:
-env:
+env: #required upload files coverage
   global:
-    - CODECOV_TOKEN=:uuid-repo-token
+    - CODECOV_TOKEN=:03852e54-9c7b-461e-bdef-09de614bf988
 cache:
   directories:
     - $HOME/.m2
