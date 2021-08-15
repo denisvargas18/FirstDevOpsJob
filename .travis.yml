@@ -17,12 +17,12 @@ before_script:
   - chmod -R a+x devops
   - chmod +x mvnw
 script:
-  - ./devops/scripts/compile.sh
-  - ./devops/scripts/test.sh
-  - ./devops/scripts/report.sh
+  - ./devops/compile.sh
+  - ./devops/test.sh
+  - ./devops/report.sh
 after_success:
   - bash <(curl -s https://codecov.io/bash)
-  - ./devops/scripts/build.sh
+  - ./devops/build.sh
 notifications:
   email:
     on_success: always
