@@ -7,7 +7,7 @@ os: linux
 dist: xenial # distribution linux ubuntu
 branches:
   only:
-    - master
+    - main
     #- develop
     #except:
     #- uat
