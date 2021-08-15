@@ -1,4 +1,4 @@
-runtime: custom
+runtime: java
 env: flex
 # service: service_net5
 # This sample incurs costs to run on the App Engine flexible environment. 
@@ -15,4 +15,4 @@ manual_scaling:
 env_variables:
   # The __ in My__Greeting will be translated to a : by ASP.NET.
   Company__Name: "ATHENAS"
-  Company__Author: "denisdev"
+  Company__Author: "denisdev-java"
