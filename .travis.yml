@@ -2,7 +2,8 @@ language: java
 jdk:
  - openjdk11
 #mono: none
-sudo: required
+sudo: required #or false
+os: linux
 dist: xenial # distribution linux ubuntu
 branches:
   only:
