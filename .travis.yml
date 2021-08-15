@@ -13,9 +13,9 @@ branches:
     #- uat
     #- feature
 #before_script:
-env: #required upload files coverage
-  global:
-    - CODECOV_TOKEN=:a63810c9-ed26-4f57-908b-5cd35f128622
+#env: #required upload files coverage
+#  global:
+#    - CODECOV_TOKEN=:a63810c9-ed26-4f57-908b-5cd35f128622
 cache:
   directories:
     - $HOME/.m2
