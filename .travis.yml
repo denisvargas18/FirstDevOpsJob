@@ -30,7 +30,19 @@ script:
 after_success:
   - bash <(curl -s https://codecov.io/bash)
   - ./devops/build.sh
+# [START travis_deploy]
+deploy:
+    provider: gae
+    # Skip cleanup so api_key.py and vendored dependencies are still there
+    skip_cleanup: true
+    keyfile: ms-firstdevopsjob-java-7c551a585d7d.json #Name file keypair generated in gcp
+    project: ms-firstdevopsjob-java #name project ID into GCP created
+    version: service-demo
+    default: true
+    on:
+      all_branches: true
 notifications:
   email:
     on_success: always
     on_failure: always
+# [END travis_deploy]

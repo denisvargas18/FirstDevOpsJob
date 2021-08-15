@@ -1,0 +1,25 @@
+language: java
+jdk:
+ - openjdk11
+sudo: required #or false
+os: linux
+dist: xenial
+branches:
+  only:
+    - main
+#    - develop
+script:
+  - mvn clean package
+  - mvn test
+# [START travis_deploy]
+deploy:
+    provider: gae
+    # Skip cleanup so api_key.py and vendored dependencies are still there
+    skip_cleanup: true
+    keyfile: travis-net5-bfb90e6c3010.json #Name file keypair generated in gcp
+    project: civic-rhythm-323000 #name project ID into GCP created
+    version: service-demo
+    default: true
+    on:
+      all_branches: true
+# [END travis_deploy]
