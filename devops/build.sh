@@ -3,7 +3,7 @@ TAG=''
 VERSION_TAG=
 
 case "$TRAVIS_BRANCH" in
-  "master")
+  "main") #branch dfault 'main'
     TAG=latest
     VERSION_TAG=$TRAVIS_BUILD_NUMBER #value automtic from travis execution job
     ;;
