@@ -12,8 +12,10 @@ branches:
     #except:
     #- uat
     #- feature
+#before_script:
 before_script:
   - chmod -R a+x devops
+  - chmod +x mvnw
 script:
   - ./devops/scripts/compile.sh
   - ./devops/scripts/test.sh
