@@ -13,6 +13,12 @@ branches:
     #- uat
     #- feature
 #before_script:
+env:
+  global:
+    - CODECOV_TOKEN=:uuid-repo-token
+cache:
+  directories:
+    - $HOME/.m2
 before_script:
   - chmod -R a+x devops
 before_install:
