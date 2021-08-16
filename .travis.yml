@@ -13,9 +13,6 @@ cache:
 before_script:
 - chmod -R a+x devops
 before_install:
-- openssl aes-256-cbc -K $encrypted_e9bd37cac8b9_key -iv $encrypted_e9bd37cac8b9_iv
-  -in ms-firstdevopsjob-java-7c551a585d7d.json.enc -out ms-firstdevopsjob-java-7c551a585d7d.json
-  -d
 - chmod +x mvnw
 script:
 - "./devops/compile.sh"
@@ -27,7 +24,7 @@ after_success:
 deploy:
   provider: gae
   skip_cleanup: true
-  keyfile: ms-firstdevopsjob-java-7c551a585d7d.json
+  keyfile: ms-firstdevopsjob-java-7c551a585d7d.json.enc
   project: ms-firstdevopsjob-java
   version: service-demo
   default: true
