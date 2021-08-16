@@ -1,4 +1,4 @@
-runtime: java
+runtime: custom #java
 env: flex
 # service: service_net5
 # This sample incurs costs to run on the App Engine flexible environment. 
